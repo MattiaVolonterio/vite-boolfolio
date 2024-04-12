@@ -1,5 +1,6 @@
 <script>
-import axios from "axios";
+import AppHeader from "./components/AppHeader.vue";
+import ProjectsMain from "./components/ProjectsMain.vue";
 
 export default {
   data() {
@@ -7,17 +8,18 @@ export default {
       title: "Boolfolio",
     };
   },
+
+  components: { AppHeader, ProjectsMain },
   props: {},
   methods: {},
-
-  created() {
-    console.log(axios);
-  },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <app-header :title="title" />
+  <div class="container my-5">
+    <projects-main />
+  </div>
 </template>
 
 <style lang="scss">
