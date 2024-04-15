@@ -18,7 +18,7 @@ export default {
 <template>
   <app-header :title="title" />
   <div class="container my-5">
-    <projects-main />
+    <router-view />
   </div>
 </template>
 
